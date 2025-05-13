@@ -2,7 +2,7 @@
 
 Welcome to the **Arabic Letters Classification** desktop application repository! This project allows users to classify the arabic letters based on various audio features extracted from the audio files.
 
-The application is built using Python. 🚀
+The ML project is built using Python. 🚀
 
 ## 🌟 Features
 
@@ -31,16 +31,11 @@ The application is built using Python. 🚀
     python 'Arabic Letter Recognition APP.py'
     ```
 4. You Could also look at the `SVM.ipynb` file with the `utilities.py` to understand how we build this Classifier
-
-## 🎥 Demo
-
-[![Watch the demo](https://github.com/AlharthAlhajHussein/Classifying-Arabic-Letters-From-Audio-Dataset-Using-SVM/blob/main/images/screenshot.png)](https://www.youtube.com/watch?v=9vnx0FEfwnI)
-
-Click the image to watch a demo video of the application in action.
+   
 
 ## 📸 Screenshot
 
-[![Screenshot](https://github.com/AlharthAlhajHussein/Classifying-Arabic-Letters-From-Audio-Dataset-Using-SVM/blob/main/images/screenshot.png)](https://www.youtube.com/watch?v=9vnx0FEfwnI)
+[![Screenshot](https://github.com/AlharthAlhajHussein/Classifying-Arabic-Letters-From-Audio-Dataset-Using-SVM/blob/main/Images/screenshot.png)](https://www.youtube.com/watch?v=9vnx0FEfwnI)
 
 ## 📂 Repository Structure
 
