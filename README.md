@@ -1,76 +1,145 @@
-# 🎙️🔤🎵 Arabic Letters Classification Desktop Application
+# 🎙️ Arabic Letters Audio Recognition
 
-Welcome to the **Arabic Letters Classification** desktop application repository! This project allows users to classify the arabic letters based on various audio features extracted from the audio files.
+This application uses machine learning to recognize and classify Arabic letters based on their audio pronunciation. Leveraging Support Vector Machine (SVM) and advanced audio feature extraction techniques, the system achieves 63% accuracy in identifying Arabic letters from about 1400 spoken audio.
 
-The ML project is built using Python. 🚀
+## 📋 Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Demo](#demo)
+- [Project Structure](#project-structure)
+- [Technology Stack](#technology-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Model Information](#model-information)
+- [Dataset](#dataset)
+- [Contributing](#contributing)
+- [License](#license)
+- [Author](#author)
+
+## 📝 Overview
+
+The Arabic Letters Audio Recognition system is designed to identify Arabic letters from audio input. It features:
+
+- A user-friendly desktop application built with CustomTkinter
+- Real-time audio recording and processing capabilities
+- Advanced audio feature extraction using librosa
+- Support Vector Machine classification model trained on a diverse dataset
+- Ability to upload existing audio files or record new ones
 
 ## 🌟 Features
 
-- **💻 User-Friendly Interface**: A simple and intuitive GUI build in python CustomTkinter library to upload and classifiy audio arabic letters files.
-- **🎶 Accurate Arabic letters Classification**: Utilizes machine learning models (SVM) to classify the letters of a song with high accuracy based on its features like MFCC, Chroma, Spectral Features, Rhythm Features.
-- **🔧 Rannable File**: Ready-to-use `Arabic Letter Recognition APP.py` file.
-- **🛠️ Customizable**: Open-source Python code for users to modify or extend the functionality as needed.
+- **Interactive GUI**: Modern, intuitive interface for easy interaction
+- **Real-time Recognition**: Record and instantly analyze Arabic letter pronunciations
+- **File Upload**: Process pre-recorded audio files in WAV, MP3, or OGG formats
+- **Advanced Audio Processing**: Sophisticated feature extraction including MFCCs, spectral features, rhythm features, and more
+- **Confidence Metrics**: Visual indicators for prediction confidence
+- **Cross-platform**: Works on Windows, macOS, and Linux
 
-## 🚀 Getting Started
+## 🎬 Demo
 
-### Running the Python Code and the Application
+![Application Screenshot](https://github.com/AlharthAlhajHussein/Classifying-Arabic-Letters-From-Audio-Dataset-Using-SVM/blob/main/Images/screenshot.png)
+
+[▶️ Watch Demo Video](https://www.youtube.com/watch?v=9vnx0FEfwnI)
+
+## 📂 Project Structure
+
+```
+📦 Arabic Letter Recognition
+ ┣ 📂 SVM Python
+ ┃ ┣ 📜 Arabic Letter Recognition APP.py  # Main application
+ ┃ ┣ 📜 SVM.ipynb                        # Model training notebook
+ ┃ ┣ 📜 utilities.py                      # Feature extraction utilities
+ ┃ ┣ 📜 arabic_letter_audio_classifier.pkl # Trained model
+ ┃ ┣ 📜 label_encoder.pkl                 # Label encoder for Arabic letters
+ ┃ ┗ 📜 requirements.txt                  # Dependencies
+ ┃
+ ┣ 📂 Cleaned Audio Dataset               # Training dataset
+ ┃ ┣ 📂 Alif
+ ┃ ┣ 📂 Ba
+ ┃ ┣ ...
+ ┃ 
+ ┗ 📂 Images                              # Project images
+   ┗ 📜 screenshot.png                    # App screenshot
+```
+
+## 🛠️ Technology Stack
+
+- **Python**: Core programming language
+- **librosa**: Audio processing and feature extraction
+- **scikit-learn**: Machine learning algorithms and pipeline
+- **CustomTkinter**: Modern GUI framework
+- **sounddevice & soundfile**: Audio recording and file handling
+- **numpy**: Numerical computations
+- **matplotlib**: Data visualization
+
+## ⚙️ Installation
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/AlharthAlhajHussein/Classifying-Arabic-Letters-From-Audio-Dataset-Using-SVM.git
-    cd 'SVM Python'
-    ```
+   ```bash
+   git clone https://github.com/AlharthAlhajHussein/Classifying-Arabic-Letters-From-Audio-Dataset-Using-SVM.git
+   cd Classifying-Arabic-Letters-From-Audio-Dataset-Using-SVM
+   ```
 
-2. Install the required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+2. Install dependencies:
+   ```bash
+   cd "SVM Python"
+   pip install -r requirements.txt
+   ```
 
-3. Run the application:
-    ```bash
-    python 'Arabic Letter Recognition APP.py'
-    ```
-4. You Could also look at the `SVM.ipynb` file with the `utilities.py` to understand how we build this Classifier
-   
+## 🚀 Usage
 
-## 📸 Screenshot
+To run the application:
 
-[![Screenshot](https://github.com/AlharthAlhajHussein/Classifying-Arabic-Letters-From-Audio-Dataset-Using-SVM/blob/main/Images/screenshot.png)](https://www.youtube.com/watch?v=9vnx0FEfwnI)
-
-## 📂 Repository Structure
-
-```plaintext
-📦Cleaned Audio Dataset
-  ┣ 📂Alif
-  ┣ 📂Ba
-  ...
-📦SVM Python 
- ┣ 📜Arabic Letter Recognition APP.py
- ┣ 📜SVM.ipynb
- ┣ 📜utilities.py
- ┣ 📜arabic_letter_audio_classifier.pkl
- ┣ 📜label_encoder.pkl
- ┣ 📂images
- ┣ 📜requirements.txt
- ┗ 📜README.md
+```bash
+python "SVM Python/Arabic Letter Recognition APP.py"
 ```
+
+The application offers two main functionalities:
+1. **Record Audio**: Click the "Record" button and pronounce an Arabic letter for 1 second
+2. **Upload Audio**: Click "Upload Audio File" to analyze a pre-recorded audio file
+
+## 📊 Model Information
+
+- **Algorithm**: Support Vector Machine (SVM) with RBF kernel
+- **Feature Extraction**: 
+  - MFCCs with delta and delta-delta coefficients
+  - Spectral features (centroid, bandwidth, contrast, flatness, rolloff)
+  - Rhythm features (tempo, beat strength)
+  - Zero crossing rate
+  - Chroma features
+  - Tonnetz (tonal centroid features)
+- **Hyperparameters**: C=100, gamma=0.0003
+- **Performance**: High accuracy across different Arabic letters
+
+## 📚 Dataset
+
+The model was trained on a dataset of Arabic letter pronunciations, with multiple samples for each letter. The audio files were processed and cleaned to ensure consistent quality and duration.
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please follow these steps to contribute:
-1. Fork the repository.
-2. Create a new feature branch (`git checkout -b feature-branch`).
-3. Make your changes and test them.
-4. Submit a pull request.
+Contributions are welcome! To contribute:
 
----
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature-name`
+5. Submit a pull request
 
-### Author: 🌟**Alharth Alhaj Hussein**🌟
+## 📄 License
 
-## 🌐 Follow Me
+This project is open source and available under the [Aleppo University License](LICENSE).
 
+## 👨‍💻 Author
+
+**Alharth Alhaj Hussein**
+
+Connect with me:
 - [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alharth-alhaj-hussein-023417241)  
 - [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AlharthAlhajHussein)   
 - [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@Alharth.Alhaj.Hussein)
 - [![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/alharthalhajhussein)
- 
+
+---
+
+If you find this project useful, please consider giving it a ⭐
