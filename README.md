@@ -114,7 +114,7 @@ The application offers two main functionalities:
 
 ## 📚 Dataset
 
-The model was trained on a dataset of Arabic letter pronunciations, with multiple samples for each letter. The audio files were processed and cleaned to ensure consistent quality and duration.
+The model was trained on a dataset of Arabic letter pronunciations, with multiple samples for each letter. The audio files were processed and cleaned to ensure consistent quality and duration. You could also use the Dataset from [Kaggle](https://www.kaggle.com/datasets/alharthalhajhussein/arabic-letters-as-audio-data).
 
 ## 🤝 Contributing
 
